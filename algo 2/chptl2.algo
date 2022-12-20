@@ -1,0 +1,47 @@
+ALGORITHM SENTENCE
+
+VAR
+
+   i,j,somme:= INTEGER ;
+
+   set_1,set_2,sum:= ARRAY_OF INTEGER[5] ;
+
+BEGIN
+    i:= 0 ;
+
+    j:= 0 ;
+  FOR i FROM 0 TO 4 DO
+        write("type set 1")
+       Read(set_1[i]);
+   END_FOR
+  
+
+   FOR i FROM 0 TO 4 DO
+        write("type set 1")
+       Read(set_2[i]);
+   END_FOR
+
+
+FOR i FROM 0 TO set_1.length STEP 1  DO
+    FOR j FROM 0 TO set_2.length STEP 1 DO
+    
+        IF (set_1[i] <> set_2[j]) THEN
+       sum.push(set_1[i]) ;
+
+   END_IF
+
+   FOR i FROM 0 TO set_1.length STEP 1  DO
+    FOR j FROM 0 TO set_2.length STEP 1 DO
+    
+        IF (set_2[i] <> set_1[j]) THEN
+       sum.push(set_1[i]) ;
+
+   END_IF
+
+
+
+FOR i FROM 0 TO sum.length STEP 1  DO
+        somme+:= somme + som[i]
+   END_FOR
+   write("The Sum of overlapping elementsis",somme)
+END
